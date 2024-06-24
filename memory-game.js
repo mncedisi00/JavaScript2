@@ -18,11 +18,9 @@ document.addEventListener('DOMContentLoaded', () => {
         gameBoard.appendChild(card);
     });
 
-    // Add event listener to the cards
     gameBoard.addEventListener('click', event => {
         const clickedCard = event.target;
 
-        // Ignore clicks on non-cards or already matched cards
         if (!clickedCard.classList.contains('card') || clickedCard.classList.contains('matched') || lockBoard) {
             return;
         }
